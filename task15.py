@@ -7,3 +7,18 @@
 # Вторая строка содержит N чисел, записанных на новой строчке каждое.
 # Здесь каждое число – это масса соответствующего арбуза.
 # Все числа натуральные и не превышают 30000.
+
+n = int(input("Введите количество арбузов: "))
+massa1 = int(input("Введите массу  арбуза: "))
+min_mass = massa1
+max_mass = massa1
+i = 2
+while i <= n:
+    massa = int(input("Введите массу  арбуза: "))
+    if massa < min_mass:
+        min_mass = massa
+    if massa > max_mass:
+        max_mass = massa
+    i += 1
+print("Максимальный вес:", max_mass)
+print("Минимальный вес:", min_mass)
